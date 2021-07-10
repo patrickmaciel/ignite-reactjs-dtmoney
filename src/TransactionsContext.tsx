@@ -1,6 +1,12 @@
 import {createContext, ReactNode, useEffect, useState} from 'react'
 import {api} from "./services/api"
 
+// interface TransactionInput {
+//   title: string,
+//   type: string,
+//   amount: number,
+//   category: string,
+// }
 interface TransactionsProps {
   id: number,
   title: string,
@@ -9,12 +15,6 @@ interface TransactionsProps {
   category: string,
   createdAt: string
 }
-// interface TransactionInput {
-//   title: string,
-//   type: string,
-//   amount: number,
-//   category: string,
-// }
 type TransactionInput = Omit<TransactionsProps, 'id' | 'createdAt'>
 
 interface TransactionsProviderProps {
